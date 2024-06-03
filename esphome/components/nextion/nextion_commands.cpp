@@ -146,8 +146,17 @@ void Nextion::set_component_pic(const char *component, uint8_t pic_id) {
   this->add_no_result_to_queue_with_printf_("set_component_pic", "%s.pic=%d", component, pic_id);
 }
 
+void Nextion::set_component_pic2(const char *component, uint8_t pic_id) {
+  this->add_no_result_to_queue_with_printf_("set_component_pic2", "%s.pic2=%d", component, pic_id);
+}
+
 void Nextion::set_component_picc(const char *component, uint8_t pic_id) {
-  this->add_no_result_to_queue_with_printf_("set_component_pic", "%s.picc=%d", component, pic_id);
+  this->add_no_result_to_queue_with_printf_("set_component_picc", "%s.picc=%d", component, pic_id);
+}
+
+// Set video
+void Nextion::set_component_vid(const char *component, uint8_t vid_id) {
+  this->add_no_result_to_queue_with_printf_("set_component_vid", "%s.vid=%d", component, vid_id);
 }
 
 void Nextion::set_component_text_printf(const char *component, const char *format, ...) {

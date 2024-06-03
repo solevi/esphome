@@ -269,7 +269,6 @@ class Nextion : public NextionBase, public PollingComponent, public uart::UARTDe
    * is shown when the component is pressed.
    */
   void set_component_pressed_foreground_color(const char *component, Color color) override;
-
   /**
    * Set the picture id of a component.
    * @param component The component name.
@@ -277,26 +276,51 @@ class Nextion : public NextionBase, public PollingComponent, public uart::UARTDe
    *
    * Example:
    * ```cpp
-   * it.set_component_pic("textview", 1);
+   * it.set_component_pic("p0", 1);
    * ```
    *
    * This will change the picture id of the component `textview`.
    */
   void set_component_pic(const char *component, uint8_t pic_id);
   /**
-   * Set the background picture id of component.
+   * Set the picture id of a Button component when pressed.
    * @param component The component name.
    * @param pic_id The picture ID.
    *
    * Example:
    * ```cpp
-   * it.set_component_picc("textview", 1);
+   * it.set_component_pic2("b0", 1);
+   * ```
+   *
+   * This will change the picture id of the component `textview`.
+   */
+  void set_component_pic2(const char *component, uint8_t pic_id);
+  /**
+   * Set the background picture id in crop mode and in Crop component.
+   * @param component The component name.
+   * @param pic_id The picture ID.
+   *
+   * Example:
+   * ```cpp
+   * it.set_component_picc("q0", 1);
    * ```
    *
    * This will change the background picture id of the component `textview`.
    */
   void set_component_picc(const char *component, uint8_t pic_id);
-
+    /**
+   * Set the video  id of a component.
+   * @param component The component name.
+   * @param vid_id The picture ID.
+   *
+   * Example:
+   * ```cpp
+   * it.set_component_vid("gm0", 1);
+   * ```
+   *
+   * This will change the video id of the component `video`.
+   */
+  void set_component_vid(const char *component, uint8_t vid_id);
   /**
    * Set the font color of a component.
    * @param component The component name.
